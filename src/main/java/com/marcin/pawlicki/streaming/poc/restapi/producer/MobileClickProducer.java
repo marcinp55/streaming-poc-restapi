@@ -1,7 +1,7 @@
-package com.streaming.poc.restapi.producer;
+package com.marcin.pawlicki.streaming.poc.restapi.producer;
 
 import com.streaming.poc.events.MobileClick;
-import com.streaming.poc.restapi.producer.config.AvroProducerConfig;
+import com.marcin.pawlicki.streaming.poc.restapi.producer.config.AvroProducerConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class MobileClickProducer extends AvroProducer<MobileClick> {
 
     @Override
     public void sendMessage(MobileClick mobileClick) {
-        this.kafkaTemplate.send(this.topic, Long.toString(mobileClick.getId()), mobileClick);
-        this.LOGGER.info(String.format("Produced MobileClick -> %s", mobileClick));
+        kafkaTemplate.send(topic, Long.toString(mobileClick.getId()), mobileClick);
+        LOGGER.info("Produced MobileClick -> " + mobileClick);
     }
 }

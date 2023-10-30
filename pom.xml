@@ -8,8 +8,8 @@
         <version>3.1.4</version>
         <relativePath/>
     </parent>
-    <groupId>com.marcin-pawlicki.streaming.poc</groupId>
-    <artifactId>rest-api</artifactId>
+    <groupId>com.marcin.pawlicki.streaming.poc</groupId>
+    <artifactId>streaming-poc-rest-api</artifactId>
     <version>0.0.1</version>
     <name>streaming-poc-rest-api</name>
 
@@ -42,6 +42,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.vaadin.external.google</groupId>
+                    <artifactId>android-json</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.kafka</groupId>

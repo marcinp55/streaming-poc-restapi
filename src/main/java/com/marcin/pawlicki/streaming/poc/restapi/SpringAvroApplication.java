@@ -1,4 +1,4 @@
-package com.streaming.poc.restapi;
+package com.marcin.pawlicki.streaming.poc.restapi;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.beans.factory.annotation.Value;
